@@ -82,7 +82,7 @@ escape ^f^f
   bind ^] paste [.]
 
   # Ctrl+cursor down, right, left for new screen and move
-  bindkey "^[[1;5A" colon 'screen sssh '
+  bindkey "^[[1;5A" colon 'screen 1 sssh '
   bindkey "^[[1;5B" screen 1
   bindkey "^[[1;5C" next
   bindkey "^[[1;5D" prev
@@ -118,6 +118,11 @@ escape ^f^f
   bind 2 eval 'layout select 2' 'layout show'
   bind 3 eval 'layout select 3' 'layout show'
   bind 4 eval 'layout select 4' 'layout show'
+  bind 5 eval 'layout select 5' 'layout show'
+  bind 6 eval 'layout select 6' 'layout show'
+  bind 7 eval 'layout select 7' 'layout show'
+  bind 8 eval 'layout select 8' 'layout show'
+  bind 9 eval 'layout select 9' 'layout show'
 
   # Layout operation mode
   bind ^L eval 'command -c layout' 'layout show'
@@ -130,42 +135,22 @@ escape ^f^f
 ### Initial layout
   screen 1
   screen 2
-  screen 3
-  screen 4
 
   layout new 1:one
   select 1
 
-  layout new 2:two
+  layout new 2:two-
   select 1
-  split -v
-  focus right
-  select 2
-  focus left
-
-  layout new 3:three
-  select 1
-  split -v
   split
   focus down
   select 2
-  focus right
-  select 3
-  focus left
   focus up
 
-  layout new 4:four
+  layout new 3:two|
   select 1
   split -v
-  split
-  focus down
-  select 2
   focus right
-  split
-  select 3
-  focus down
-  select 4
+  select 2
   focus left
-  focus up
 
-  layout select 4
+  layout select 1

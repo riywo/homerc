@@ -1,0 +1,10 @@
+[user]  
+        name = riywo
+        email = riywo.jp@gmail.com
+[color] 
+        ui = true
+[alias] 
+        tree = log --graph --pretty='format:%h %Cgreen%an%Creset | %s %Cred%d%Creset'
+        st = status
+        co = checkout
+        br = branch
