@@ -5,3 +5,5 @@ source "usr/local/share/git-completion/git-prompt.sh"
 source "usr/local/share/git-completion/git-completion.bash"
 export PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
 export PS1='\[\033k'"$HOSTNAME"'\033\\\]'"$PS1"
+
+export MANPATH="$HOME/usr/local/share/man:$HOME/usr/local/man:$MANPATH"
